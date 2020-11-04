@@ -1,0 +1,28 @@
+from turtle import *
+lapiz = Turtle()
+pantalla = Screen()
+pantalla.setup(350, 350)
+pantalla.screensize(30,30)
+pantalla.setworldcoordinates(0,30,30,0)
+lapiz.speed(0)
+
+def cuadro():
+    for x in range(4):
+        lapiz.forward(1)
+        lapiz.right(90)
+
+def pixel(color):
+    lapiz.color(color)
+    lapiz.begin_fill()
+    cuadro()
+    lapiz.end_fill()
+    lapiz.forward(1)
+    
+def maspixeles(n, color):
+    for x in range(n):
+        pixel(color)
+
+def ir(x,y):
+    lapiz.penup()
+    lapiz.goto(x,y)
+    lapiz.pendown()
