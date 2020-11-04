@@ -3,7 +3,7 @@ lapiz = Turtle()
 pantalla = Screen()
 pantalla.setup(350, 350)
 pantalla.screensize(30,30)
-pantalla.setworldcoordinates(0,30,30,0)
+pantalla.setworldcoordinates(0,30,30,0) # Tanto el tamaño como las coordenadas que vayamos a utilizar dependerán del pixelart que se desea dibujar.
 lapiz.speed(0)
 
 def cuadro():
@@ -11,18 +11,18 @@ def cuadro():
         lapiz.forward(1)
         lapiz.right(90)
 
-def pixel(color):
+def pixel(color): # Esta función nos permite crear un pixel del color que le indiquemos.
     lapiz.color(color)
     lapiz.begin_fill()
     cuadro()
     lapiz.end_fill()
     lapiz.forward(1)
     
-def maspixeles(n, color):
+def maspixeles(n, color): # Esta función nos permite crear varios pixeles del color que le indiquemos.
     for x in range(n):
         pixel(color)
 
-def ir(x,y):
+def ir(x,y): # Con esta función podremos movernos a la coordenada que deseemos.
     lapiz.penup()
     lapiz.goto(x,y)
     lapiz.pendown()
